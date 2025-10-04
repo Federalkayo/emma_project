@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover luxury handmade waist beads and African-inspired jewelry from Nana Hauwa Beads & Crafts">
+    <title>Nana Hauwa Beads & Crafts - Luxury Handmade Waist Beads</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+    <header id="header" role="banner">
+        <nav class="container" aria-label="Main navigation">
+            <button class="logo" aria-label="Nana Hauwa Beads & Crafts home">Nana Hauwa</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#shop" class="nav-link" data-page="shop">Shop</a></li>
+                <li><a href="#blog" class="nav-link" data-page="blog">Blog</a></li>
+                <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="modeToggle" class="mode-toggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="cart-btn" aria-label="Shopping cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="hero-bg"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content fade-in">
+                    <h1 class="gold-glow">Nana Hauwa Beads & Crafts</h1>
+                    <p class="hero-subtitle">Luxury Handmade Waist Beads & African-Inspired Jewelry</p>
+                    <button class="btn-primary ripple" id="shopNowBtn">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="featured-section">
+                <div class="container">
+                    <h2 class="section-title gold-glow">Featured Collections</h2>
+
+                    <div class="carousel-container">
+                        <div class="carousel" id="carousel">
+                            <div class="carousel-slide active">
+                                <img src="https://via.placeholder.com/800x600/D4AF37/000000?text=Royal+Elegance+Collection" alt="Royal Elegance Collection" loading="lazy">
+                                <div class="carousel-caption">
+                                    <h3 class="gold-glow">Royal Elegance</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://via.placeholder.com/800x600/000000/D4AF37?text=Cultural+Beauty+Collection" alt="Cultural Beauty Collection" loading="lazy">
+                                <div class="carousel-caption">
+                                    <h3 class="gold-glow">Cultural Beauty</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://via.placeholder.com/800x600/D4AF37/000000?text=Modern+Grace+Collection" alt="Modern Grace Collection" loading="lazy">
+                                <div class="carousel-caption">
+                                    <h3 class="gold-glow">Modern Grace</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-btn prev" id="carouselPrev" aria-label="Previous slide">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn next" id="carouselNext" aria-label="Next slide">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+
+                        <div class="carousel-dots" id="carouselDots"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tradition-section">
+                <div class="container">
+                    <h2 class="section-title gold-glow">Tradition Meets Elegance</h2>
+                    <p class="tradition-text">
+                        Every piece tells a story. Our handcrafted waist beads celebrate African heritage while embracing modern sophistication. Discover the perfect blend of culture, beauty, and confidence.
+                    </p>
+                    <button class="btn-secondary ripple" id="storyBtn">Read Our Story</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="shop" class="page">
+            <div class="container shop-container">
+                <h1 class="page-title gold-glow fade-in">Our Collection</h1>
+                <p class="page-subtitle">Discover handcrafted luxury waist beads that celebrate your beauty and heritage</p>
+
+                <div class="shop-controls">
+                    <button class="filter-toggle ripple" id="filterToggle">
+                        <i class="fas fa-filter"></i>
+                        <span>Filters</span>
+                    </button>
+                    <p class="product-count" id="productCount">8 products</p>
+                </div>
+
+                <div class="filters" id="filters">
+                    <div class="filter-group">
+                        <label for="colorFilter">Color</label>
+                        <select id="colorFilter" class="filter-select">
+                            <option value="all">All Colors</option>
+                            <option value="gold">Gold</option>
+                            <option value="black">Black</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="white">White</option>
+                            <option value="purple">Purple</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="styleFilter">Style</label>
+                        <select id="styleFilter" class="filter-select">
+                            <option value="all">All Styles</option>
+                            <option value="traditional">Traditional</option>
+                            <option value="modern">Modern</option>
+                            <option value="elegant">Elegant</option>
+                            <option value="bohemian">Bohemian</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="productsGrid"></div>
+            </div>
+        </section>
+
+        <section id="blog" class="page">
+            <div class="container blog-container">
+                <article class="blog-post fade-in">
+                    <header class="blog-header">
+                        <h2 class="blog-title gold-glow">5 Reasons Every Woman Should Own Waist Beads</h2>
+                        <div class="blog-date">
+                            <i class="far fa-calendar"></i>
+                            <time datetime="2025-09-09">September 9, 2025</time>
+                        </div>
+                    </header>
+
+                    <div class="blog-intro">
+                        <p id="typingText"></p>
+                    </div>
+
+                    <div class="blog-slider">
+                        <div class="blog-carousel" id="blogCarousel">
+                            <img src="https://via.placeholder.com/800x500/D4AF37/000000?text=Waist+Beads+1" alt="Waist beads showcase 1" class="active" loading="lazy">
+                            <img src="https://via.placeholder.com/800x500/000000/D4AF37?text=Waist+Beads+2" alt="Waist beads showcase 2" loading="lazy">
+                            <img src="https://via.placeholder.com/800x500/D4AF37/000000?text=Waist+Beads+3" alt="Waist beads showcase 3" loading="lazy">
+                        </div>
+
+                        <button class="carousel-btn prev" id="blogPrev" aria-label="Previous image">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn next" id="blogNext" aria-label="Next image">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+
+                        <div class="carousel-dots" id="blogDots"></div>
+                    </div>
+
+                    <ul class="reasons-list" id="reasonsList"></ul>
+
+                    <div class="blog-social">
+                        <h3 class="gold-glow">Connect With Us</h3>
+                        <div class="social-links">
+                            <a href="https://wa.me/2348123274396" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Contact us on WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="https://instagram.com/nanahauwa75" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow us on Instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>@nanahauwa75</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="page">
+            <div class="container contact-container">
+                <h1 class="page-title gold-glow fade-in">Get In Touch</h1>
+                <p class="page-subtitle">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h2 class="gold-text">Send Us a Message</h2>
+                        <div id="formMessage" class="form-message"></div>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Enter your message"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary ripple">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-container">
+                        <div class="contact-info">
+                            <h2 class="gold-text">Contact Information</h2>
+                            <div class="info-items">
+                                <div class="info-item">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <div>
+                                        <h3>WhatsApp</h3>
+                                        <a href="https://wa.me/2348123274396" target="_blank" rel="noopener noreferrer">+234 812 327 4396</a>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fab fa-instagram"></i>
+                                    <div>
+                                        <h3>Instagram</h3>
+                                        <a href="https://instagram.com/nanahauwa75" target="_blank" rel="noopener noreferrer">@nanahauwa75</a>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <h3>Email</h3>
+                                        <p>info@nanahauwabeads.com</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <h3>Location</h3>
+                                        <p>Lagos, Nigeria</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+
+                        <div class="whatsapp-quick">
+                            <h3 class="gold-text">Quick WhatsApp</h3>
+                            <a href="https://wa.me/2348123274396" target="_blank" rel="noopener noreferrer" class="btn-primary ripple">
+                                Chat With Us Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://wa.me/2348123274396" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/nanahauwa75" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p>&copy; 2025 Nana Hauwa Beads & Crafts. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
